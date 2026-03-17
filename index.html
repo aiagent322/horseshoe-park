@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HorseShoe Park Equestrian Centre AI - Queen Creek Events</title>
+    <meta name="description" content="AI-powered guide to HorseShoe Park Equestrian Centre in Queen Creek, Arizona. Find events, facility information, and FAQs for this premier Arizona equestrian venue.">
+    <meta name="keywords" content="HorseShoe Park, Queen Creek equestrian, Arizona horse events, HorseShoe Park events, Queen Creek horse shows">
+    <meta property="og:title" content="HorseShoe Park Equestrian Centre AI">
+    <meta property="og:description" content="AI-powered guide to events and information at HorseShoe Park Equestrian Centre in Queen Creek, Arizona.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HorseShoe Park Equestrian Centre AI">
+    <meta name="twitter:description" content="AI-powered guide to HorseShoe Park Equestrian Centre in Queen Creek, Arizona.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐴</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .skip-link { position: absolute; top: -40px; left: 0; background: #b8956a; color: white; padding: 8px 15px; z-index: 100; text-decoration: none; }
+        .skip-link:focus { top: 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lato', sans-serif; background: #f5f5f5; color: #333; }
+        
+        /* Header */
+        .header { background: #1a1a1a; color: white; text-align: center; padding: 40px 20px 30px 20px; }
+        
+        /* Global Search Container */
+        .search-container { max-width: 700px; margin: 25px auto 0 auto; }
+        .global-search-row { display: flex; gap: 10px; }
+        .global-search-row input { flex: 1; padding: 15px 20px; border: none; border-radius: 8px; font-size: 1.1rem; font-family: 'Lato', sans-serif; }
+        .global-search-row input:focus { outline: none; box-shadow: 0 0 0 3px rgba(184, 149, 106, 0.3); }
+        .global-search-row button { background: #b8956a; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 1rem; font-family: 'Lato', sans-serif; cursor: pointer; font-weight: 600; }
+        .global-search-row button:hover { background: #a17d54; }
+        .search-hint { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 8px; text-align: center; }
+        .header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px; }
+        .header .sponsor { font-size: 1rem; font-weight: 400; margin-bottom: 6px; opacity: 0.95; }
+        .header .disclaimer { font-size: 0.9rem; opacity: 0.7; font-weight: 300; }
+        
+        /* Stats Bar - Always one line */
+        .stats-container { background: #b8956a; display: flex; justify-content: center; padding: 20px 15px; gap: 40px; flex-wrap: nowrap; }
+        .stat { text-align: center; white-space: nowrap; }
+        .stat-number { font-size: 1.6rem; font-weight: 700; color: white; display: block; margin-bottom: 2px; }
+        .stat-label { font-size: 0.65rem; color: white; text-transform: uppercase; letter-spacing: 1px; font-weight: 400; }
+        
+        /* Container */
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Four Boxes - Always one line */
+        .four-boxes { display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: nowrap; }
+        .box { background: white; padding: 18px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); cursor: pointer; transition: all 0.3s; border: 1px solid #e8e8e8; flex: 1; min-width: 0; }
+        .box:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.12); border-color: #b8956a; }
+        .box h3 { font-size: 1rem; color: #333; margin-bottom: 6px; font-weight: 600; white-space: nowrap; }
+        .box p { color: #666; font-size: 0.75rem; line-height: 1.4; }
+        
+        /* Search Section */
+        .search-section { background: white; padding: 35px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .search-section h2 { font-size: 1.4rem; color: #333; margin-bottom: 6px; font-weight: 600; }
+        .search-section .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 25px; }
+        
+        /* Search Bar */
+        .search-bar { display: flex; gap: 12px; margin-bottom: 25px; }
+        .search-bar input { flex: 1; padding: 12px 16px; border: 1px solid #ddd; border-radius: 5px; font-size: 0.95rem; font-family: 'Lato', sans-serif; }
+        .search-bar input:focus { outline: none; border-color: #b8956a; }
+        .search-bar button { padding: 12px 22px; border: none; border-radius: 5px; font-size: 0.9rem; cursor: pointer; font-weight: 500; transition: all 0.3s; }
+        .btn-search { background: #b8956a; color: white; }
+        .btn-search:hover { background: #a17d54; }
+        .btn-clear { background: #f8f8f8; color: #666; border: 1px solid #ddd !important; }
+        .btn-clear:hover { background: #f0f0f0; }
+        
+        /* Filter Rows */
+        .filter-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 15px; }
+        .filter-row-2 { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 10px; }
+        .filter-group { display: flex; flex-direction: column; }
+        .filter-group label { font-weight: 600; color: #333; margin-bottom: 6px; font-size: 0.9rem; }
+        .filter-group input, .filter-group select { padding: 10px 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 0.9rem; font-family: 'Lato', sans-serif; background: white; }
+        .filter-group input:focus, .filter-group select:focus { outline: none; border-color: #b8956a; }
+        
+        /* Results */
+        .results-count { margin: 20px 0 15px 0; color: #666; font-size: 0.9rem; }
+        .results-count strong { color: #b8956a; }
+        .results-container { overflow-y: auto; }
+        
+        /* Event Cards - RIGHT border */
+        .event-card { background: white; padding: 25px; border-radius: 6px; margin-bottom: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border-right: 5px solid #b8956a; border: 1px solid #eee; border-right: 5px solid #b8956a; }
+        .event-title { font-size: 1.15rem; font-weight: 600; color: #333; margin-bottom: 8px; }
+        .event-date { color: #b8956a; font-weight: 500; margin-bottom: 6px; font-size: 0.9rem; }
+        .event-location { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+        .event-type-tag { display: inline-block; background: #f5f0e6; color: #8b7355; padding: 5px 14px; border-radius: 4px; font-size: 0.8rem; margin-bottom: 12px; font-weight: 500; }
+        .event-description { color: #555; line-height: 1.7; font-size: 0.9rem; margin-bottom: 15px; }
+        .event-links { display: flex; gap: 20px; font-size: 0.85rem; align-items: center; }
+        .event-links a { color: #b8956a; text-decoration: none; display: flex; align-items: center; gap: 4px; }
+        .event-links a:hover { text-decoration: underline; }
+        .event-links span { color: #666; display: flex; align-items: center; gap: 4px; }
+        
+        /* Q&A Items - RIGHT border */
+        .qa-item { background: white; padding: 25px; border-radius: 6px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 1px solid #eee; border-right: 5px solid #b8956a; }
+        .qa-question { font-weight: 600; color: #333; margin-bottom: 10px; font-size: 1rem; }
+        .qa-answer { color: #555; line-height: 1.7; font-size: 0.9rem; }
+        .qa-category { display: inline-block; background: #f5f0e6; color: #8b7355; padding: 5px 14px; border-radius: 4px; font-size: 0.75rem; margin-top: 12px; font-weight: 500; }
+        
+        /* Category Cards */
+        .category-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        .category-card { background: linear-gradient(135deg, #f5f0e6 0%, #ffffff 100%); padding: 20px; border-radius: 6px; border: 1px solid #e8e8e8; cursor: pointer; transition: all 0.3s; text-align: center; }
+        .category-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #b8956a; }
+        .category-card-name { font-size: 1.1rem; font-weight: 600; color: #333; margin-bottom: 8px; }
+        .category-card-count { font-size: 2rem; font-weight: 700; color: #b8956a; margin-bottom: 4px; }
+        .category-card-label { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        /* Upcoming Events Horizontal Scroll */
+        .upcoming-section { background: #b8956a; padding: 30px 0 35px 0; margin-top: 0; }
+        .upcoming-header { max-width: 1100px; margin: 0 auto; padding: 0 20px 20px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .upcoming-header-left h2 { color: white; font-size: 1.2rem; font-weight: 600; margin-bottom: 3px; }
+        .upcoming-header-left span { color: rgba(255,255,255,0.85); font-size: 0.85rem; }
+        .scroll-controls { display: flex; gap: 8px; }
+        .scroll-btn { background: rgba(255,255,255,0.25); border: none; color: white; width: 34px; height: 34px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
+        .scroll-btn:hover { background: rgba(255,255,255,0.4); }
+        .upcoming-scroll-wrapper { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .upcoming-scroll { display: flex; gap: 16px; overflow-x: auto; scroll-behavior: smooth; padding: 5px 0 10px 0; -ms-overflow-style: none; scrollbar-width: none; }
+        .upcoming-scroll::-webkit-scrollbar { display: none; }
+        .upcoming-card { flex: 0 0 240px; background: white; border-radius: 8px; padding: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; transition: transform 0.3s; }
+        .upcoming-card:hover { transform: translateY(-3px); }
+        .upcoming-card-date { background: #b8956a; color: white; padding: 6px 12px; border-radius: 4px; display: inline-block; font-weight: 700; font-size: 0.8rem; margin-bottom: 12px; }
+        .upcoming-card-title { font-size: 0.95rem; font-weight: 600; color: #333; margin-bottom: 10px; line-height: 1.3; }
+        .upcoming-card-time { color: #b8956a; font-size: 0.85rem; margin-bottom: 4px; }
+        .upcoming-card-location { color: #666; font-size: 0.85rem; margin-bottom: 10px; }
+        .upcoming-card-desc { color: #555; font-size: 0.8rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        /* Footer Disclaimer */
+        .footer { background: #4a4a4a; color: #ccc; text-align: center; padding: 25px 20px; font-size: 0.85rem; line-height: 1.6; }
+        .footer strong { color: #fff; }
+        
+        /* Responsive - boxes stay on one line */
+        @media (max-width: 968px) {
+            .filter-row { grid-template-columns: 1fr; }
+            .filter-row-2 { grid-template-columns: 1fr; }
+            .upcoming-card { flex: 0 0 220px; }
+            .box { padding: 15px 10px; }
+            .box h3 { font-size: 0.95rem; }
+            .box p { font-size: 0.7rem; }
+            .stats-container { gap: 20px; padding: 15px 10px; }
+            .stat-number { font-size: 1.3rem; }
+            .stat-label { font-size: 0.55rem; letter-spacing: 0.5px; }
+        }
+        
+        @media (max-width: 480px) {
+            .box { padding: 12px 8px; }
+            .box h3 { font-size: 0.85rem; }
+            .box p { display: none; }
+            .stats-container { gap: 12px; }
+            .stat-number { font-size: 1.1rem; }
+            .stat-label { font-size: 0.5rem; }
+        }
+        
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="header" role="banner">
+        <h1>HorseShoe Park & Equestrian Centre AI</h1>
+        <p class="sponsor">A public service produced by Bridle & Bit Magazine <a href="https://www.bridleandbit.com" target="_blank" style="color: #b8956a;">(Read Here Free)</a></p>
+        <p class="disclaimer">AI can make mistakes — verify event details before attending</p>
+        
+        <div class="search-container">
+            <div class="global-search-row">
+                <input type="text" id="globalSearch" aria-label="Search events and Q&A" placeholder="Search events & Q&A (2+ chars)...">
+                <button id="globalSearchBtn" aria-label="Search">Search</button>
+            </div>
+            <p class="search-hint">Start typing to search events, policies, and Q&A (2+ characters)</p>
+        </div>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat"><span class="stat-number" id="statEvents">17</span><span class="stat-label">Events</span></div>
+        <div class="stat"><span class="stat-number" id="statTypes">10</span><span class="stat-label">Event Types</span></div>
+        <div class="stat"><span class="stat-number" id="statVenues">1</span><span class="stat-label">Venues</span></div>
+        <div class="stat"><span class="stat-number" id="statQA">107</span><span class="stat-label">Q&A Items</span></div>
+        <div class="stat"><span class="stat-number" id="statPolicies">13</span><span class="stat-label">Policies</span></div>
+    </div>
+
+    <div class="container" id="main-content" role="main">
+        <div class="four-boxes" role="navigation">
+            <div class="box" onclick="showSection('calendar')">
+                <h3>Calendar</h3>
+                <p>Browse upcoming equestrian events at HorseShoe Park & Equestrian Centre</p>
+            </div>
+            <div class="box" onclick="showSection('qa')">
+                <h3>Q & A</h3>
+                <p>Frequently asked questions about HorseShoe Park & Equestrian Centre</p>
+            </div>
+            <div class="box" onclick="showSection('policies')">
+                <h3>Policies</h3>
+                <p>Facility rules and rental policies for HorseShoe Park & Equestrian Centre</p>
+            </div>
+            <div class="box" onclick="showSection('submit')">
+                <h3>Submit Event</h3>
+                <p>Add your event to HorseShoe Park & Equestrian Centre calendar</p>
+            </div>
+        </div>
+
+        <!-- Q&A Section -->
+        <div id="qaSection" class="search-section hidden">
+            <h2>Find Your Answer</h2>
+            <p class="subtitle">Search frequently asked questions about HorseShoe Park & Equestrian Centre.</p>
+            
+            <!-- Category Cards -->
+            <div class="category-cards">
+                <div class="category-card" onclick="selectQACategory('Events')">
+                    <div class="category-card-name">Events</div>
+                    <div class="category-card-count">37</div>
+                    <div class="category-card-label">Questions</div>
+                </div>
+                <div class="category-card" onclick="selectQACategory('Roots N Boots')">
+                    <div class="category-card-name">Roots N Boots</div>
+                    <div class="category-card-count">35</div>
+                    <div class="category-card-label">Questions</div>
+                </div>
+                <div class="category-card" onclick="selectQACategory('Queen Creek')">
+                    <div class="category-card-name">Queen Creek</div>
+                    <div class="category-card-count">8</div>
+                    <div class="category-card-label">Questions</div>
+                </div>
+                <div class="category-card" onclick="selectQACategory('Facility')">
+                    <div class="category-card-name">Facility</div>
+                    <div class="category-card-count">7</div>
+                    <div class="category-card-label">Questions</div>
+                </div>
+                <div class="category-card" onclick="selectQACategory('Contact')">
+                    <div class="category-card-name">Contact</div>
+                    <div class="category-card-count">5</div>
+                    <div class="category-card-label">Questions</div>
+                </div>
+                <div class="category-card" onclick="selectQACategory('Arena')">
+                    <div class="category-card-name">Arena</div>
+                    <div class="category-card-count">5</div>
+                    <div class="category-card-label">Questions</div>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="qaSearchInput" placeholder="Search by keyword or topic...">
+                <button class="btn-search" onclick="searchQA()">🔍 Search</button>
+                <button class="btn-clear" onclick="clearQASearch()">× Clear</button>
+            </div>
+            
+            <div class="filter-row" style="grid-template-columns: 1fr 2fr;">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="qaCategoryFilter" onchange="filterQA()">
+                        <option value="">All Categories</option>
+                        <option value="Arena">Arena</option>
+                        <option value="Community">Community</option>
+                        <option value="Contact">Contact</option>
+                        <option value="Events">Events</option>
+                        <option value="Facility">Facility</option>
+                        <option value="Hotels">Hotels</option>
+                        <option value="Queen Creek">Queen Creek</option>
+                        <option value="Roots N Boots">Roots N Boots</option>
+                        <option value="Schedule">Schedule</option>
+                        <option value="Youth">Youth</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="results-count">Showing <strong id="qaResultsCount">107</strong> of <strong>107</strong> Q&A items</div>
+            <div id="qaResultsContainer" class="results-container"></div>
+        </div>
+
+        <!-- Policies Section -->
+        <div id="policiesSection" class="search-section hidden">
+            <h2>Facility Policies</h2>
+            <p class="subtitle">View rules, regulations, and rental policies for HorseShoe Park & Equestrian Centre.</p>
+            
+            <!-- Category Cards -->
+            <div class="category-cards" style="grid-template-columns: repeat(2, 1fr); max-width: 600px;">
+                <div class="category-card" onclick="selectPoliciesCategory('Policies')">
+                    <div class="category-card-name">Facility Rules</div>
+                    <div class="category-card-count">9</div>
+                    <div class="category-card-label">Policies</div>
+                </div>
+                <div class="category-card" onclick="selectPoliciesCategory('Rental')">
+                    <div class="category-card-name">Rental Policies</div>
+                    <div class="category-card-count">4</div>
+                    <div class="category-card-label">Policies</div>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="policiesSearchInput" placeholder="Search policies...">
+                <button class="btn-search" onclick="searchPolicies()">🔍 Search</button>
+                <button class="btn-clear" onclick="clearPoliciesSearch()">× Clear</button>
+            </div>
+            
+            <div class="filter-row" style="grid-template-columns: 1fr 2fr;">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="policiesCategoryFilter" onchange="filterPolicies()">
+                        <option value="">All Categories</option>
+                        <option value="Policies">Facility Rules</option>
+                        <option value="Rental">Rental Policies</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="results-count">Showing <strong id="policiesResultsCount">13</strong> of <strong>13</strong> policy items</div>
+            <div id="policiesResultsContainer" class="results-container"></div>
+        </div>
+
+        <!-- Calendar Section -->
+        <div id="calendarSection" class="search-section">
+            <h2>Find Your Event</h2>
+            <p class="subtitle">Search by name, location, or type. Browse all upcoming events at HorseShoe Park.</p>
+            
+            <!-- Event Type Category Cards -->
+            <div class="category-cards">
+                <div class="category-card" onclick="selectEventType('Cutting')">
+                    <div class="category-card-name">Cutting</div>
+                    <div class="category-card-count">3</div>
+                    <div class="category-card-label">Events</div>
+                </div>
+                <div class="category-card" onclick="selectEventType('Hunter/Jumper')">
+                    <div class="category-card-name">Hunter/Jumper</div>
+                    <div class="category-card-count">3</div>
+                    <div class="category-card-label">Events</div>
+                </div>
+                <div class="category-card" onclick="selectEventType('Gymkhana')">
+                    <div class="category-card-name">Gymkhana</div>
+                    <div class="category-card-count">3</div>
+                    <div class="category-card-label">Events</div>
+                </div>
+                <div class="category-card" onclick="selectEventType('4-H/Youth')">
+                    <div class="category-card-name">4-H/Youth</div>
+                    <div class="category-card-count">2</div>
+                    <div class="category-card-label">Events</div>
+                </div>
+                <div class="category-card" onclick="selectEventType('Mounted Shooting')">
+                    <div class="category-card-name">Mounted Shooting</div>
+                    <div class="category-card-count">1</div>
+                    <div class="category-card-label">Event</div>
+                </div>
+                <div class="category-card" onclick="selectEventType('Barrel Racing')">
+                    <div class="category-card-name">Barrel Racing</div>
+                    <div class="category-card-count">1</div>
+                    <div class="category-card-label">Event</div>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="calendarSearchInput" placeholder="Search by name, date, or type...">
+                <button class="btn-search" onclick="searchCalendar()">🔍 Search</button>
+                <button class="btn-clear" onclick="clearCalendarSearch()">× Clear</button>
+            </div>
+            
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>Event Name</label>
+                    <input type="text" id="eventNameFilter" placeholder="Enter name..." onkeyup="applyCalendarFilters()">
+                </div>
+                <div class="filter-group">
+                    <label>Event Type</label>
+                    <select id="eventTypeFilter" onchange="applyCalendarFilters()">
+                        <option value="">All Types</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Venue</label>
+                    <select id="venueFilter" onchange="applyCalendarFilters()">
+                        <option value="">All Venues</option>
+                        <option value="HorseShoe Park">HorseShoe Park</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-row-2">
+                <div class="filter-group">
+                    <label>Month</label>
+                    <select id="monthFilter" onchange="applyCalendarFilters()">
+                        <option value="">All Months</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="results-count">Showing <strong id="calendarResultsCount">17</strong> of <strong>17</strong> events</div>
+            <div id="calendarResultsContainer" class="results-container"></div>
+        </div>
+
+        <!-- Submit Event Section -->
+        <div id="submitSection" class="search-section hidden">
+            <h2>Submit Your Event</h2>
+            <p class="subtitle">Add your equestrian event to our calendar for free.</p>
+            
+            <form action="https://formsubmit.co/rexwager@aol.com" method="POST" style="max-width: 600px; margin: 0 auto;">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New HorseShoe Park Event Submission">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://horseshoepark.ai?submitted=true">
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Event Name *</label>
+                    <input type="text" name="Event Name" required style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;">
+                </div>
+                
+                <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                    <div style="flex: 1;">
+                        <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Start Date *</label>
+                        <input type="date" name="Start Date" required style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">End Date</label>
+                        <input type="date" name="End Date" style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;">
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                    <div style="flex: 1;">
+                        <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Start Time *</label>
+                        <input type="time" name="Start Time" required style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Event Type *</label>
+                        <select name="Event Type" required style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;">
+                            <option value="">Select Type...</option>
+                            <option value="Team Roping">Team Roping</option>
+                            <option value="Barrel Racing">Barrel Racing</option>
+                            <option value="Breakaway Roping">Breakaway Roping</option>
+                            <option value="Ranch Sorting">Ranch Sorting</option>
+                            <option value="Cutting">Cutting</option>
+                            <option value="Reining">Reining</option>
+                            <option value="Gymkhana">Gymkhana</option>
+                            <option value="Horse Show">Horse Show</option>
+                            <option value="Clinic">Clinic</option>
+                            <option value="Youth Program">Youth Program</option>
+                            <option value="Trail Ride">Trail Ride</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Event Description * (150 words max)</label>
+                    <textarea name="Description" required maxlength="1000" rows="4" style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px; resize: vertical;" placeholder="Describe your event, entry fees, prizes, etc."></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                    <div style="flex: 1;">
+                        <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Website URL</label>
+                        <input type="url" name="Website" placeholder="https://" style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Contact Phone *</label>
+                        <input type="tel" name="Phone" required placeholder="(480) 555-1234" style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;">
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; color: #b8956a; margin-bottom: 5px; font-weight: bold;">Your Email *</label>
+                    <input type="email" name="Email" required style="width: 100%; padding: 12px; border: 1px solid #3a3a3a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 16px;" placeholder="your@email.com">
+                </div>
+                
+                <button type="submit" style="width: 100%; padding: 15px; background: linear-gradient(135deg, #b8956a 0%, #8B7355 100%); color: #fff; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                    Submit Event for Review
+                </button>
+                <p style="text-align: center; color: #888; margin-top: 10px; font-size: 14px;">Events will be reviewed and added within 48 hours.</p>
+            </form>
+            
+            <div class="qa-item" style="margin-top: 30px;">
+                <div class="qa-question">Event Listing Guidelines</div>
+                <div class="qa-answer">Events must be equestrian-related and held at HorseShoe Park & Equestrian Centre in Queen Creek, AZ. We list competitions, clinics, shows, youth programs, and community events. Listings are free and provided as a public service by Bridle & Bit Magazine. We reserve the right to edit submissions for clarity and accuracy.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question">Contact HorseShoe Park</div>
+                <div class="qa-answer">For facility rentals and event bookings at HorseShoe Park:<br>Phone: 480-358-3710 (general) or 480-358-3793 (rentals)<br>Email: <a href="/cdn-cgi/l/email-protection#daa8bfa2adbbbdbfa89abbb5b6f4b9b5b7" style="color:#b8956a;"><span class="__cf_email__" data-cfemail="f98b9c818e989e9c8bb9989695d79a9694">[email&#160;protected]</span></a><br>Address: 20464 E. Riggs Road, Queen Creek, AZ 85142</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events Horizontal Scroll -->
+    <div class="upcoming-section">
+        <div class="upcoming-header">
+            <div class="upcoming-header-left">
+                <h2>Upcoming HorseShoe Park Events</h2>
+                <span id="upcomingCount">17 upcoming events</span>
+            </div>
+            <div class="scroll-controls">
+                <button class="scroll-btn" onclick="scrollUpcoming(-1)">◀</button>
+                <button class="scroll-btn" onclick="scrollUpcoming(1)">▶</button>
+            </div>
+        </div>
+        <div class="upcoming-scroll-wrapper">
+            <div class="upcoming-scroll" id="upcomingScroll"></div>
+        </div>
+    </div>
+
+    <!-- Footer Disclaimer -->
+    <div class="footer" role="contentinfo">
+        <strong>Disclaimer:</strong> Event information is provided for reference only. Dates, times, locations, entry fees, and other details may change without notice. Always verify event details directly with producers or venues before making travel arrangements. We are not responsible for errors, omissions, or changes to listed events.
+    </div>
+
+    <script>
+    const qaData = [
+    {
+        "Question": "How do I contact HorseShoe Park & Equestrian Centre?",
+        "Answer": "You can reach HorseShoe Park & Equestrian Centre by phone at 480-358-3710 for general inquiries or 480-358-3793 for facility rentals, tours, and event bookings. You can also email hpec@queencreekaz.gov. The business office is open Monday through Friday from 7:00 AM to 5:00 PM, and the facility is open on weekends from 7:00 AM to 10:00 PM.",
+        "Category": "Contact"
+    },
+    {
+        "Question": "What is the email address for HorseShoe Park & Equestrian Centre?",
+        "Answer": "You can email HorseShoe Park & Equestrian Centre at hpec@queencreekaz.gov for general inquiries, event information, facility rentals, stall reservations, and RV space bookings.",
+        "Category": "Contact"
+    },
+    {
+        "Question": "What is the address of HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre is located at 20464 E. Riggs Road, Queen Creek, AZ 85142. The facility is situated on Riggs Road between Hawes and Ellsworth roads in the southeast portion of the Phoenix metropolitan area.",
+        "Category": "Contact"
+    },
+    {
+        "Question": "What are the operating hours for HorseShoe Park & Equestrian Centre?",
+        "Answer": "The main facility is open Monday through Friday from 7:00 AM to 5:00 PM, and Saturday through Sunday from 7:00 AM to 10:00 PM. The Community Arena is open daily from 7:00 AM to 10:00 PM for drop-in use. Event facilities are available for reservation 365 days per year.",
+        "Category": "Contact"
+    },
+    {
+        "Question": "How do I schedule a tour of HorseShoe Park & Equestrian Centre?",
+        "Answer": "To arrange a tour of HorseShoe Park & Equestrian Centre, please call the facility rental office at 480-358-3793. Tours are available to potential event organizers, competitors, and anyone interested in learning more about this premier Arizona equestrian venue.",
+        "Category": "Contact"
+    },
+    {
+        "Question": "How large is HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre is a majestic 38-acre all-outdoor facility located in the Phoenix metropolitan area. The park provides ample space for events of both English and Western equestrian disciplines, as well as vendor fairs, concerts, rodeos, and community gatherings.",
+        "Category": "Facility"
+    },
+    {
+        "Question": "How many arenas does HorseShoe Park & Equestrian Centre have?",
+        "Answer": "HorseShoe Park & Equestrian Centre has five main arenas plus a Community Arena. Arena 1 'Chapman Automotive Group Arena' (covered, 150' x 300') and Arena 3 'Arizona Cutting Horse Arena' (covered, 130' x 300') are covered facilities. Arena 2 'Tuff Shed Arena' (outdoor, 150' x 300') and Arena 4 (outdoor, 150' x 300') are outdoor arenas. Arena 5 has flexible sizing with no permanent fencing. The Community Arena (225' x 150') is available for public drop-in use.",
+        "Category": "Arena"
+    },
+    {
+        "Question": "What is Arena 1 called?",
+        "Answer": "Arena 1 is officially named the 'Chapman Automotive Group Arena.' It is the main covered arena measuring 150' x 300' with seating for over 2,600 spectators. This arena hosts major rodeos and competitions including Roots N' Boots.",
+        "Category": "Arena"
+    },
+    {
+        "Question": "What is Arena 3 called?",
+        "Answer": "Arena 3 is officially named the 'Arizona Cutting Horse Arena.' It is a covered arena measuring 130' x 300', specifically designed for cutting horse competitions with large cattle pens (185' x 90') providing direct access.",
+        "Category": "Arena"
+    },
+    {
+        "Question": "What is Arena 2 called?",
+        "Answer": "Arena 2 is officially named the 'Tuff Shed Arena.' It is an outdoor arena measuring 150' x 300' with seating for 268 spectators and smaller bleachers for additional viewing.",
+        "Category": "Arena"
+    },
+    {
+        "Question": "What is the Community Arena?",
+        "Answer": "The Community Arena is a public-use facility located in the southwest section of HorseShoe Park & Equestrian Centre, measuring 225' x 150'. It opens at 7:00 AM and closes at 10:00 PM daily and is available for drop-in use only. The area includes an arena, round pen, small gathering area, and restrooms. Equestrian activities requiring special equipment (barrels, jumping poles, cones, mounted shooting) are not permitted in the Community Arena.",
+        "Category": "Arena"
+    },
+    {
+        "Question": "What is the seating capacity at HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre has extensive spectator seating. Arena 1 'Chapman Automotive Group Arena' seats over 2,600 spectators, Arena 2 'Tuff Shed Arena' seats 268, and the other arenas have smaller bleachers. The facility is designed to accommodate both intimate events and major competitions with thousands of attendees.",
+        "Category": "Facility"
+    },
+    {
+        "Question": "How many stalls are available at HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre currently has 350 permanent stalls thanks to a recent $75,000 donation from Friends of HorseShoe Park & Equestrian Centre. An additional 100 stalls are in the planning stages, and there is room for 200 temporary stalls during major events. Stall reservations can be made online through the Town of Queen Creek's CivicRec reservation system.",
+        "Category": "Facility"
+    },
+    {
+        "Question": "Does HorseShoe Park & Equestrian Centre have RV camping?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre offers 77 RV spaces with hookups (20, 30, or 50 amp electric and water) at each location. RV spaces are $35 per night and can be reserved online at secure.rec1.com/AZ/queen-creek-az/catalog/. Two RV dump stations are located in the NW corner of the RV lot and are open 24/7 for $15 per use.",
+        "Category": "Facility"
+    },
+    {
+        "Question": "How do I make RV and stall reservations?",
+        "Answer": "RV spaces and stalls can be reserved online through the Town of Queen Creek's CivicRec system at secure.rec1.com/AZ/queen-creek-az/catalog/. You will need to create an account with your email address. If coming with an event, check your registration forms for specific reservation information, or call the business office at 480-358-3793 for assistance.",
+        "Category": "Facility"
+    },
+    {
+        "Question": "What parking is available at HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre offers spectator parking for 260 vehicles in the South parking lot, with an overflow lot available for additional parking during large events. Parking arrangements and fees vary by event. For major events like Roots N' Boots, general parking is $10 per car, with limited preferred parking available for $20.",
+        "Category": "Facility"
+    },
+    {
+        "Question": "What amenities does HorseShoe Park & Equestrian Centre have?",
+        "Answer": "HorseShoe Park & Equestrian Centre features professional footing by RD Kiser Design, 5-rail pipe fencing (2 3/8 schedule 40), full site PA and sound system, 2 show offices, over 12 vendor spaces with water and electric connections, large cattle pens (185' x 90') for Arena 1 and Arena 3, and professional lighting for evening events. The facility is designed with flexibility in mind for both English and Western equestrian disciplines.",
+        "Category": "Facility"
+    },
+    {
+        "Question": "What types of events can be held at HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre hosts a wide variety of events including team roping, cutting horse shows, barrel racing, quarter horse competitions, hunter/jumper shows, dressage, gymkhana, youth 4-H programs, cowboy church services, rodeos, mounted shooting, vendor fairs, concerts, car shows, and weddings. The facility is designed to accommodate both English and Western equestrian disciplines plus non-equestrian community events.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What equestrian disciplines are featured at HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre features multiple western disciplines including team roping, cutting, barrel racing, reining, and reined cow horse. The facility also hosts English disciplines like hunter/jumper and dressage. Breed-specific events are held through organizations like the Southern Arizona Quarter Horse Association. The versatile facility design accommodates nearly any equestrian discipline.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Does HorseShoe Park & Equestrian Centre host team roping events?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre hosts major team roping events including the Equine Network World Series Team Roping, Cisco Productions events, and numerous other competitions. These multi-day competitions typically begin at 7:00 AM and attract ropers from across Arizona and neighboring states.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Are there cutting horse events at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, the Arizona Cutting Horse Association holds regular events at HorseShoe Park & Equestrian Centre throughout the year. The facility features a dedicated covered arena named the 'Arizona Cutting Horse Arena' with large cattle pens providing direct access. Competitions typically run multiple days (up to 5 days) and start at 8:00 AM, featuring classes from Youth through Open divisions.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Does HorseShoe Park & Equestrian Centre have barrel racing?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre regularly hosts barrel racing events including the Burns Xtreme Barrel Race, Xtreme Queen Creek Barrel Race, and various gymkhana club competitions. The facility's professional footing and arena design make it ideal for speed events. Some barrel racing events run up to 9 consecutive days.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What quarter horse events are held at HorseShoe Park & Equestrian Centre?",
+        "Answer": "The Southern Arizona Quarter Horse Association (SAQHA) holds regular shows at HorseShoe Park & Equestrian Centre. These events typically run for 4 days and begin at 8:00 AM, featuring halter, western pleasure, horsemanship, and performance classes approved by AQHA.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Are there hunter/jumper shows at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre hosts hunter/jumper shows produced by Collman Equestrian Productions (CEP) and Arizona Horse Show. These USEF, USHJA, AHJA, CHJA, and NMHJA approved shows feature classes from Walk-Trot introductory divisions through rated hunter, equitation, and jumper classes with professional course design.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Are there youth programs at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, the QC 4-H Horse Project holds regular meetings at HorseShoe Park & Equestrian Centre for youth ages 5-18. These youth-focused sessions typically meet in the evenings at 6:00 PM and provide hands-on educational opportunities in horsemanship skills, equine care, leadership development, and community service. The program also hosts an annual 4-H Horse Show.",
+        "Category": "Youth"
+    },
+    {
+        "Question": "What is the QC 4-H Horse Project?",
+        "Answer": "The QC 4-H Horse Project is a comprehensive youth program that meets regularly at HorseShoe Park & Equestrian Centre. Members ages 5-18 develop horsemanship skills, learn equine care and responsibility, and participate in community service projects. Meetings are held in the evenings at 6:00 PM and include demonstrations, guest speakers, and preparation for 4-H competitions, clinics, and workshops throughout the year.",
+        "Category": "Youth"
+    },
+    {
+        "Question": "Does HorseShoe Park & Equestrian Centre host community events?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre hosts community events beyond equestrian competitions, including Heart Cry Cowboy Church services, vendor fairs, concerts, car and RV shows, and community celebrations. The facility serves as a gathering place for Queen Creek's western heritage community and welcomes both equestrian and non-equestrian events.",
+        "Category": "Community"
+    },
+    {
+        "Question": "Is there a cowboy church at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, Heart Cry Cowboy Church holds weekly worship services at HorseShoe Park & Equestrian Centre, typically beginning at 6:00 PM. Services feature contemporary Christian music with a western flair and provide spiritual support for Queen Creek's equestrian community in a comfortable, cowboy-friendly atmosphere. All are welcome regardless of background or horse experience.",
+        "Category": "Community"
+    },
+    {
+        "Question": "What time do events typically start at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Event start times vary by type. Competition events like team roping, cutting horse shows, hunter/jumper shows, and quarter horse events typically begin early, between 7:00 AM and 8:00 AM. Evening events such as 4-H meetings, cowboy church services, and some gymkhana competitions usually start at 6:00 PM. Some events feature both morning and evening sessions.",
+        "Category": "Schedule"
+    },
+    {
+        "Question": "How long do events last at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Event duration varies significantly. Major competitions often span multiple days: team roping events typically run 3 days, cutting horse shows run up to 5 days, barrel racing can extend to 9 days, and quarter horse shows usually last 4 days. Hunter/jumper shows generally run 3-4 days. Youth meetings and community events are typically single-day gatherings. Roots N' Boots runs for 6 days.",
+        "Category": "Schedule"
+    },
+    {
+        "Question": "What organizations regularly host events at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Several prestigious organizations regularly host events at HorseShoe Park & Equestrian Centre including the Arizona Cutting Horse Association, Arizona Reined Cow Horse Association, Arizona Reining Horse Association, Equine Network (World Series Team Roping), Southern Arizona Quarter Horse Association, Collman Equestrian Productions (CEP), Cisco Productions, Burns Xtreme, CMSA (Cowboy Mounted Shooting), Chandler Vaqueros Saddle Club, QC 4-H Horse Project, and Heart Cry Cowboy Church.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Are events held on weekdays or weekends?",
+        "Answer": "HorseShoe Park & Equestrian Centre hosts events throughout the week, 365 days per year. Multi-day competitions often span both weekdays and weekends to accommodate full competition schedules. Evening programs like 4-H meetings are typically held on weekdays, while community events and some competitions may be concentrated on weekends. The facility's flexible scheduling accommodates a wide variety of event formats.",
+        "Category": "Schedule"
+    },
+    {
+        "Question": "What events are good for spectators at HorseShoe Park & Equestrian Centre?",
+        "Answer": "All competitions at HorseShoe Park & Equestrian Centre welcome spectators. Popular spectator events include team roping (fast-paced action), cutting horse competitions (showcasing horse athleticism and cow sense), barrel racing (exciting speed events), quarter horse shows (variety of classes), hunter/jumper shows (beautiful courses), rodeos (professional PRCA action), and cowboy mounted shooting (unique western sport). Many events are free to watch.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Can beginners participate in events at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Many events at HorseShoe Park & Equestrian Centre offer divisions for various skill levels. The QC 4-H Horse Project is specifically designed for youth learning horsemanship. Many competitions include novice, beginner, or amateur divisions. Gymkhana clubs welcome riders of all experience levels. For specific competition events, contact the hosting organization directly to inquire about novice or beginner divisions appropriate for your skill level.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What hotels are near HorseShoe Park & Equestrian Centre?",
+        "Answer": "The closest hotel to HorseShoe Park & Equestrian Centre is Hampton Inn Queen Creek, located about 3.8 miles away at 20768 E Maya Road. It offers complimentary breakfast, outdoor pool, hot tub, and 24-hour fitness center. Other nearby options include Four Points by Sheraton at Phoenix Mesa Gateway Airport (about 7 miles), Holiday Inn Express Gilbert-Mesa Gateway Airport, and Hyatt Place Phoenix/Gilbert. Many hotels offer special rates for equestrian event participants.",
+        "Category": "Hotels"
+    },
+    {
+        "Question": "Where should I stay when visiting HorseShoe Park & Equestrian Centre?",
+        "Answer": "Hampton Inn Queen Creek is the most convenient hotel, just 3.8 miles from HorseShoe Park & Equestrian Centre. It features free breakfast, pool, and is surrounded by shops and restaurants. For those with horses, HorseShoe Park & Equestrian Centre offers RV camping with hookups on-site ($35/night). Vacation rentals and Airbnbs are also available throughout Queen Creek for longer stays or larger groups.",
+        "Category": "Hotels"
+    },
+    {
+        "Question": "Are there pet-friendly hotels near HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, several nearby hotels allow pets including Four Points by Sheraton at Phoenix Mesa Gateway Airport, Hyatt Place Phoenix/Gilbert, and Home2 Suites by Hilton Gilbert. Always call ahead to confirm specific pet policies, weight restrictions, and any associated fees before booking.",
+        "Category": "Hotels"
+    },
+    {
+        "Question": "What is Queen Creek, Arizona?",
+        "Answer": "Queen Creek is a fast-growing town in Maricopa and Pinal counties in Arizona, located in the far southeast area of the Phoenix Metropolitan Area. With a population of approximately 83,700 as of 2024, it is one of the fastest-growing communities in Arizona, having grown over 1,800% since 2000. The town is known for its rural western heritage, family-oriented community, and strong equestrian lifestyle.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "How big is Queen Creek?",
+        "Answer": "Queen Creek covers approximately 42 square miles and has a population of around 83,700 residents as of 2024. The town has experienced explosive growth, increasing from about 4,300 residents in 2000 to over 83,000 today - one of the fastest growth rates in Arizona. The median household income is approximately $135,000, and the average household size is 3.55 people.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "What is the population of Queen Creek?",
+        "Answer": "Queen Creek has a population of approximately 83,700 as of 2024, making it the 16th most populated city in Arizona. The town is growing at a rate of about 8% annually. The population was only 4,300 in 2000 and 59,519 at the 2020 census, demonstrating remarkable growth over the past two decades.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "What is the weather like in Queen Creek?",
+        "Answer": "Queen Creek has a hot desert climate (Sonoran Desert) with long, extremely hot summers and mild winters. Summer temperatures typically reach the mid to upper 90s, often exceeding 100\u00b0F in July and August. Winter temperatures range from the mid-40s to mid-60s. The area receives only about 10 inches of rain per year and enjoys approximately 301 sunny days annually - making it one of the sunniest places on Earth.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "What is the climate in Queen Creek, Arizona?",
+        "Answer": "Queen Creek experiences a subtropical desert climate with average annual temperatures around 72-75\u00b0F. Summers are hot and dry with temperatures frequently exceeding 100\u00b0F from June through September. Winters are mild with temperatures rarely dropping below 33\u00b0F. The region receives minimal rainfall (about 10 inches annually), primarily during the monsoon season from July to mid-September and a secondary rainy season in winter.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "When is the best time to visit Queen Creek?",
+        "Answer": "The best time to visit Queen Creek for outdoor activities and equestrian events is during the cooler months from October through April, when temperatures are pleasant (60s-80s\u00b0F). The peak equestrian season at HorseShoe Park & Equestrian Centre runs from fall through spring. Summer months (June-September) can be extremely hot with temperatures exceeding 100\u00b0F, though indoor covered arena events still take place year-round.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "What attractions are near HorseShoe Park & Equestrian Centre in Queen Creek?",
+        "Answer": "Queen Creek offers many attractions near HorseShoe Park & Equestrian Centre including Schnepf Farms (seasonal festivals and family activities), Queen Creek Olive Mill (tours and tastings), San Tan Mountain Regional Park (10,000+ acres of hiking and trails), SanTan Village (shopping and dining), and Queen Creek Botanical Gardens. The town celebrates its agricultural heritage and western lifestyle with numerous farms, ranches, and outdoor recreation opportunities.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "How far is HorseShoe Park & Equestrian Centre from Phoenix Sky Harbor Airport?",
+        "Answer": "HorseShoe Park & Equestrian Centre is located in Queen Creek in the southeast portion of the Phoenix metropolitan area. The facility is conveniently accessible from two major freeways and is approximately 30-35 miles from Phoenix Sky Harbor International Airport, typically a 35-45 minute drive depending on traffic.",
+        "Category": "Queen Creek"
+    },
+    {
+        "Question": "What is Friends of HorseShoe Park & Equestrian Centre?",
+        "Answer": "Friends of HorseShoe Park & Equestrian Centre (FOHP) is a 501(c)(3) nonprofit organization incorporated in 2010, dedicated to supporting HorseShoe Park & Equestrian Centre and fostering the rural heritage of Queen Creek, Arizona. FOHP is an all-volunteer group that works hand-in-hand with Queen Creek officials on facility improvements, fundraising, and attracting events. In 2023 alone, FOHP donated $132,785 for facility enhancements and recently donated $75,000 to add 30 additional stalls.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Who organizes Roots N' Boots?",
+        "Answer": "Roots N' Boots Queen Creek is organized by Friends of HorseShoe Park & Equestrian Centre (FOHP), a 501(c)(3) nonprofit organization. The event is planned and executed by dedicated volunteer committee members who meet monthly from August to March to prepare for this signature community celebration.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "How does Friends of HorseShoe Park & Equestrian Centre support the facility?",
+        "Answer": "Friends of HorseShoe Park & Equestrian Centre supports HorseShoe Park & Equestrian Centre through fundraising and capital improvements. In 2023 alone, FOHP donated $132,785 for facility enhancements including fencing, asphalt along the Paseo, and horse panels. They recently donated $75,000 to add 30 additional stalls, bringing the total from 320 to 350 stalls. All contributions directly benefit the facility and Queen Creek's equestrian community.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "How can I volunteer for Roots N' Boots?",
+        "Answer": "You can volunteer for Roots N' Boots Queen Creek either on the planning committee (meeting monthly August-March) or during the event weekend. Contact rexwager@aol.com to express interest. All volunteers receive an event T-shirt and a PRCA Rodeo ticket voucher. Volunteer hours count as community service since FOHP is a recognized 501(c)(3) charity.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "How can I contact Friends of HorseShoe Park & Equestrian Centre?",
+        "Answer": "You can contact Friends of HorseShoe Park & Equestrian Centre by email at rexwager@aol.com. Their mailing address is PO Box 1062, Queen Creek, AZ 85142. You can also follow them on Facebook and Instagram @RootsNBootsQC for updates about events, volunteer opportunities, and facility improvements.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is Roots N' Boots Queen Creek?",
+        "Answer": "Roots N' Boots Queen Creek is an annual multi-day community celebration featuring PRCA professional rodeo, carnival, live entertainment, vendors, and family activities. Billed as 'More Than A Rodeo,' it celebrates Queen Creek's western lifestyle and agricultural heritage. Inaugurated in 2011, the event has grown to welcome over 22,000 spectators annually and was voted one of the Top 5 PRCA Small Rodeos in 2024.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "When is Roots N' Boots 2026?",
+        "Answer": "Roots N' Boots Queen Creek 2026 will be held March 17-22, 2026 at HorseShoe Park & Equestrian Centre in Queen Creek, Arizona. The 6-day event features professional rodeo performances, carnival, vendors, and family activities celebrating western heritage.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Where is Roots N' Boots held?",
+        "Answer": "Roots N' Boots Queen Creek is held at HorseShoe Park & Equestrian Centre, located at 20464 E. Riggs Road, Queen Creek, AZ 85142. All activities take place on the 38-acre facility including rodeo performances in the covered Chapman Arena.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "How big is the Roots N' Boots event?",
+        "Answer": "Roots N' Boots Queen Creek has grown from a two-day event with 8,000 guests in 2011 to a 6-day extravaganza welcoming over 22,000 spectators. It was voted one of the Top 5 PRCA Small Rodeos in 2024 and is one of the fastest-growing event extravaganzas in Arizona, showcasing the vibrant western culture of Queen Creek.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is the economic impact of HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre has a significant economic impact on Queen Creek and the surrounding region. With approximately 80 equestrian-related events annually and over 11,000 horses visiting the park each year, the facility contributes an estimated $40.2 million in direct economic impact to the Town of Queen Creek and its residents.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What rodeo events are at Roots N' Boots?",
+        "Answer": "The full PRCA rodeo performances at Roots N' Boots include all 8 traditional rodeo events: barrel racing, saddle bronc riding, bareback riding, team roping, tie-down roping, steer wrestling, breakaway roping, and bull riding. Performances also feature specialty acts, mutton busting, and local youth competitors showcasing Arizona's rodeo talent.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is Roots N' Chutes?",
+        "Answer": "Roots N' Chutes is the Thursday night bull riding event at Roots N' Boots Queen Creek. It showcases PRCA professional bull riders competing for the best 8-second rides, along with local youth roughstock riders competing on calves, steers, and small bulls. This fan-favorite event kicks off the rodeo weekend with high-energy action.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Is there an All Women's Rodeo at Roots N' Boots?",
+        "Answer": "Yes, the All Women's Rodeo is held on Wednesday evening at Roots N' Boots. It features WPRA breakaway roping, team roping, barrel racing, horse trick riders, and youth barrel racing. This event celebrates female competitors in professional rodeo and highlights the important role women play in the sport.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is Rodeo 101?",
+        "Answer": "Rodeo 101 is a ticketed behind-the-scenes educational tour offered at Roots N' Boots Queen Creek. For $5, attendees can learn about the sport of rodeo with tours starting 60 minutes prior to performances. It's perfect for newcomers who want to understand rodeo events, traditions, equipment, and the care of rodeo livestock.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "When are the rodeo performances at Roots N' Boots?",
+        "Answer": "At Roots N' Boots, Wednesday through Saturday night rodeo performances start at 7:00 PM with gates opening at 5:00 PM. Friday and Sunday matinee performances start at 1:00 PM with gates opening at 12:00 PM. All professional rodeo action takes place in the covered Chapman Automotive Group Arena (Arena 1).",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What free activities are at Roots N' Boots?",
+        "Answer": "Roots N' Boots offers many free activities including Kids N' Kritters (ages 3-11), Ranch Dressing (12 and up), Xtreme Teen (ages 12-19), the petting zoo, AgTivity educational booths, rodeo dances on Friday and Saturday nights, Sunday pancake breakfast, and the Youth Dance on Thursday. These activities make Roots N' Boots accessible to families.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is Kids N' Kritters?",
+        "Answer": "Kids N' Kritters is a free event at Roots N' Boots for children ages 3-11. Activities include mutton busting, stick horse racing, dash for cash, learning to rope, clownin' around sack race, and ribbon pulling. It's western-themed fun that introduces kids to rodeo activities in a safe, supervised environment.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is Xtreme Teen?",
+        "Answer": "Xtreme Teen is a free event at Roots N' Boots for teens ages 12-19. Activities are done on foot in the covered arena and include Xtreme Chute Doggin' (steer toss), The Chicken Challenge, Piggy Back Hustle, and Goat Tying. No livestock experience is necessary, and winners receive custom Roots N' Boots buckles.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is Ranch Dressing?",
+        "Answer": "Ranch Dressing is a free event at Roots N' Boots for participants ages 12 and up. It features rodeo-themed activities on foot that allow people of all experience levels to participate in western fun. This interactive competition gives adults a chance to experience ranch and rodeo skills in a safe, entertaining format.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is the Special Kids Rodeo?",
+        "Answer": "The Special Kids Rodeo is a free event at Roots N' Boots for children ages 5 through high school with intellectual and developmental disabilities. It features hands-on activities including touching and learning about livestock feed, cowboy tools, tack, and participating in rodeo event games. This inclusive program ensures all children can experience the excitement of rodeo.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Is there a carnival at Roots N' Boots?",
+        "Answer": "Yes, Roots N' Boots features a large carnival and midway with over 15 rides for all ages. The carnival opens at 5:00 PM daily during the event, and tickets are available for purchase on-site. Rides range from gentle attractions for young children to thrilling rides for teens and adults.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Is there a petting zoo at Roots N' Boots?",
+        "Answer": "Yes, Roots N' Boots has a free petting zoo in the AgTivity Zone where children can interact with farm animals. Pony rides are also available for $5 for the little buckaroos, providing a gentle introduction to horses for young children.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is the AgTivity Zone?",
+        "Answer": "The AgTivity Zone at Roots N' Boots features free agricultural education activities through Agriscaping Technologies and Arizona Ag in the Classroom. It includes educational booths about farming and ranching, the petting zoo, and hands-on activities that teach children and families about Arizona's agricultural heritage and modern farming practices.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Are there dances at Roots N' Boots?",
+        "Answer": "Yes, Roots N' Boots features free rodeo dances on Friday and Saturday nights from 8:00 PM until midnight in the covered Arena 3. The dances are family-oriented and kid-friendly, featuring live music and DJ entertainment. A Youth Dance is also held Thursday night, providing safe, supervised entertainment for young people.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Is there a pancake breakfast at Roots N' Boots?",
+        "Answer": "Yes, Roots N' Boots offers a free Pancake & Sausage Breakfast on Sunday from 8:00 AM to 10:00 AM. A photo booth is available where you can get free printed and digital copies of your pictures to commemorate the day, making it a perfect family tradition to end the event weekend.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is the Cowboy Marketplace?",
+        "Answer": "The Cowboy Marketplace at Roots N' Boots is a vendor area featuring shopping, food, and western merchandise. An impressive lineup of vendors offers something for everyone, from western apparel and tack to crafts, jewelry, artwork, and specialty items celebrating western lifestyle and heritage.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Are there food vendors at Roots N' Boots?",
+        "Answer": "Yes, Roots N' Boots features numerous food vendors throughout the event with a wide variety of choices including traditional fair food, barbecue, Mexican cuisine, and southwestern specialties. Food is available in the Cowboy Marketplace area and throughout the grounds during all event hours.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "How much is parking at Roots N' Boots?",
+        "Answer": "General parking at Roots N' Boots is $10 per car in the back of the park. Preferred parking at the front of the park is $20 per car but is limited and available on a first-come, first-served basis. Parking is paid on-site only. There is no offsite parking available, and cars parked along Riggs Road or in residential areas may be subject to towing.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "How do I buy tickets for Roots N' Boots?",
+        "Answer": "Rodeo tickets for Roots N' Boots are sold online at RootsNBoots.org before the event and can be purchased up until showtime if still available. Tickets are emailed with QR codes for entry. Full PRCA performances often sell out, so early purchase is strongly recommended. Do not buy from third-party resellers - only purchase through the official website.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What if the rodeo is sold out?",
+        "Answer": "If a Roots N' Boots rodeo performance is sold out, the action is LiveStreamed for free in the Entertainment Hall so you can still watch. You can also view the outdoor arena to watch Cowboy Mounted Shooters in action. Come out and enjoy all the other attractions including the carnival, vendors, food, and free activities even if rodeo tickets aren't available.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Is there accessible seating at Roots N' Boots?",
+        "Answer": "Yes, there is plenty of ADA accessible seating at Roots N' Boots rodeo performances. Check with the ticket office upon arrival for ADA seating accommodations and assistance. The facility is designed to ensure all guests can enjoy the rodeo comfortably.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is Cowboy Christmas at Roots N' Boots?",
+        "Answer": "Roots N' Boots Queen Creek Cowboy Christmas is a holiday event hosted at HorseShoe Park & Equestrian Centre. It features a western-themed shopping experience and live streaming of the National Finals Rodeo (NFR) performances from the Cowboy Channel, bringing the excitement of the world championship rodeo to Queen Creek during the December holiday season.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is the Pony Express at Roots N' Boots?",
+        "Answer": "The Roots N' Boots Queen Creek Pony Express is an annual event where riders carry mail from Kearny, Arizona to HorseShoe Park & Equestrian Centre, celebrating the Old West tradition. The 3rd Annual Pony Express begins at 7:30 AM from the Kearny Post Office and arrives during the Saturday festivities, typically covering over 40 miles on horseback.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "Is there a royalty program at Roots N' Boots?",
+        "Answer": "Yes, Roots N' Boots has a Rodeo Royalty program featuring queens who represent the event throughout the year at parades, community events, and other western celebrations. Royalty applications are available annually with deadlines in December. The Royalty Court participates in grand entries and autograph sessions after rodeo performances.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What other shows are at Roots N' Boots?",
+        "Answer": "Beyond the rodeo, Roots N' Boots features an Antique Tractor Show, Truck & Jeep Show, Cowboy Mounted Shooting demonstrations in the outdoor arena, Equine Meet & Greet with beautiful draft horses, horsemanship clinics and demonstrations, and a cornhole tournament. There's truly something for everyone to enjoy during the 6-day celebration.",
+        "Category": "Roots N Boots"
+    },
+    {
+        "Question": "What is team roping?",
+        "Answer": "Team roping is a timed rodeo event where two mounted riders (a header and heeler) work together to rope and immobilize a steer as quickly as possible. Originating from practical ranch work, it's the only rodeo event where men and women compete equally together. The header ropes the steer's head or horns first, then turns the steer to allow the heeler to rope both hind legs. Fastest time wins.",
+        "Category": "Events"
+    },
+    {
+        "Question": "How does team roping work?",
+        "Answer": "Team roping begins with the steer released from a chute with a head start. The header chases and ropes the steer's horns, head, or neck, then 'dallies' (wraps the rope around the saddle horn) and turns left. The heeler then ropes both hind legs. Time stops when both riders face each other with tight ropes. Breaking the barrier early results in a 10-second penalty; catching only one hind leg adds 5 seconds.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What are the positions in team roping?",
+        "Answer": "Team roping has two positions: the Header ropes the steer's head first (using a 30-32 foot softer rope) and must make a legal catch on the horns, head, or neck. The Heeler ropes the hind legs after the header turns the steer (using a 35-36 foot stiffer rope). Both positions require different skills, timing, and techniques. Ropers often maintain the same partner for years to develop chemistry and communication.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is a legal head catch in team roping?",
+        "Answer": "In team roping, a legal head catch includes: both horns, head and one horn, or around the neck. Any other head catch is considered illegal and will result in disqualification. The header must wait for the barrier before leaving the box, or a 10-second penalty is assessed.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What breeds are used for team roping?",
+        "Answer": "American Quarter Horses are the most popular breed for team roping due to their speed, agility, powerful hindquarters for quick stops, intelligence, and calm temperament under pressure. These horses must be trained to respond to subtle cues, work cattle instinctively, and handle the physical demands of rapid acceleration and sharp turns required in team roping.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is barrel racing?",
+        "Answer": "Barrel racing is a timed rodeo event where a horse and rider race around three barrels arranged in a cloverleaf pattern as fast as possible. The rider can choose to go right or left first, then must circle the second barrel on the opposite side, complete the pattern at the third barrel, and race back across the finish line. It's primarily a women's event at professional levels, though both sexes compete at amateur levels.",
+        "Category": "Events"
+    },
+    {
+        "Question": "How does the barrel racing pattern work?",
+        "Answer": "The barrel racing pattern forms a cloverleaf with three barrels arranged in a triangle. Standard distances are 90 feet between barrels 1 and 2, and 105 feet from those to barrel 3. Riders enter at speed, circle one barrel, race to the opposite barrel, then to the third barrel before sprinting to the finish. Time starts and stops as the horse crosses the start/finish line electronically.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What happens if you knock over a barrel?",
+        "Answer": "If a barrel racer or horse hits a barrel and knocks it over, there is a 5-second time penalty added to the run. This penalty usually results in a time too slow to win, as winning times are often decided by tenths of a second. However, the run is still complete. Running off pattern or going around a barrel the wrong direction results in disqualification ('no time').",
+        "Category": "Events"
+    },
+    {
+        "Question": "How fast is barrel racing?",
+        "Answer": "Elite barrel racing runs typically take 13-17 seconds to complete the pattern, depending on arena size. Winning times at professional rodeos are often separated by hundredths of a second. The fastest recorded times are under 14 seconds in regulation-sized arenas. This requires horses to reach speeds of 30+ mph while making tight turns around the barrels.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What makes a good barrel racing horse?",
+        "Answer": "A good barrel racing horse needs exceptional speed, agility for tight turns, strong hindquarters for power, athletic ability for quick direction changes, and a calm yet responsive temperament. American Quarter Horses are preferred for their natural speed and turning ability. The horse must be able to 'rate' (adjust speed) going into barrels, make clean flying lead changes, and accelerate quickly coming out of turns.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is a cloverleaf pattern?",
+        "Answer": "The cloverleaf pattern is the standard barrel racing course featuring three barrels arranged in a triangle. Riders complete the pattern by circling each barrel in sequence, creating a shape similar to a three-leaf clover when viewed from above. The rider can start on either the right or left barrel, but must follow the pattern consistently - one direction around the first barrel, opposite direction around the second, then same as the second around the third.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is cutting horse competition?",
+        "Answer": "Cutting is a Western equestrian competition where a horse and rider work together to separate a single cow from a herd and prevent it from returning. Once the cow is separated, the rider drops the reins, giving the horse complete control to work the cow independently for 2.5 minutes. It's the only equestrian sport where the horse must think and react on its own. Judges score from 60-80 points based on the horse's ability, cow sense, and athletic performance.",
+        "Category": "Events"
+    },
+    {
+        "Question": "How does cutting horse judging work?",
+        "Answer": "Cutting competitions start with a base score of 70 points. Judges add points for good herd work, eye appeal, difficult cow work, and athletic ability. Points are subtracted for penalties: -1 point for using reins or noise to guide the horse, -3 points for scattering the herd or spurring the shoulder, -5 points if the cow returns to the herd or switching cows mid-work. Scores typically range from 60-80, with anything above 75 considered exceptional.",
+        "Category": "Events"
+    },
+    {
+        "Question": "How long is a cutting horse run?",
+        "Answer": "A cutting horse run is exactly 2 minutes and 30 seconds (2.5 minutes). During this time, the horse and rider must make at least two cuts from the herd, with one being a 'deep cut' from inside the herd. Competitors typically work 2-3 cows during their run. Time begins when horse and rider cross the timeline into the working area.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What helpers are used in cutting?",
+        "Answer": "Each cutting competitor is assisted by four mounted helpers: two turnback riders who keep separated cattle from running to the back of the arena, and two herd holders who keep the remaining cattle bunched together and prevent strays from escaping into the work area. These helpers are chosen by the competitor and play a crucial role in the success of the run.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is cow sense in a cutting horse?",
+        "Answer": "Cow sense (also called 'cow smart' or 'cowy') is a horse's natural instinct and ability to read cattle behavior, anticipate their movements, and respond appropriately without rider input. A horse with strong cow sense can predict where a cow will move next and position itself to block the cow's return to the herd. This innate ability is highly valued and cannot be fully taught - horses either have it or they don't. American Quarter Horses are particularly known for strong cow sense.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is a deep cut in cutting?",
+        "Answer": "A deep cut in cutting competition requires the rider to enter deep into the herd (toward the center or back) to separate a cow, rather than just peeling one from the outer edges. Competitors must make at least one deep cut during their 2.5-minute run. Deep cuts are more challenging because they require skillfully working through the herd without scattering cattle, demonstrating superior horsemanship and herd management.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Can you use your hands in cutting?",
+        "Answer": "Once the cow is separated from the herd, cutting rules prohibit the rider from using reins to guide the horse. Riders 'drop their hands' to the horse's neck, signaling the horse to work independently. Using reins, making noise, or visibly cueing the horse while working the cow results in point deductions (1 point per infraction). The horse must demonstrate the ability to work entirely on instinct and training.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is the NCHA?",
+        "Answer": "The National Cutting Horse Association (NCHA) was founded in 1946 and is the primary organization governing cutting horse competitions in the United States. The NCHA establishes rules, sanctions events, certifies judges, maintains competition records, and promotes the sport. The organization's mission is to promote and celebrate the cutting horse while supporting western heritage and providing fair competition from beginners to advanced levels.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is gymkhana?",
+        "Answer": "Gymkhana is a type of equestrian competition featuring timed speed events and games on horseback. Common gymkhana events include barrel racing, pole bending, keyhole race, flag race, and stake race. These events test a horse and rider's speed, agility, and precision. Gymkhana is popular at all skill levels, particularly for youth riders, and provides an affordable entry point into competitive riding. Events are usually held at local clubs with age divisions.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is pole bending?",
+        "Answer": "Pole bending is a timed gymkhana event where horse and rider weave through a line of six poles placed 21 feet apart. The rider races to the far end, weaves through the poles in a serpentine pattern, then weaves back through and races to the finish line. Knocking over a pole results in a 5-second penalty. This event tests speed, agility, and the horse's ability to make quick direction changes at speed.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is mounted shooting?",
+        "Answer": "Cowboy Mounted Shooting is an equestrian sport where riders on horseback navigate a timed course while shooting at balloon targets using .45 caliber single-action revolvers loaded with blank ammunition. Originating in the 1990s, the sport combines horsemanship, marksmanship, and speed. Courses include over 60 different patterns with varying levels of difficulty. CMSA (Cowboy Mounted Shooting Association) sanctions competitions nationwide, and the sport is free for spectators to watch.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is reining?",
+        "Answer": "Reining is a Western riding competition showcasing a horse's athleticism and willingness through a pattern of circles, spins, and stops. Often called 'Western dressage,' reining tests precise control and responsiveness. Horses perform maneuvers including sliding stops, rollbacks, 360-degree spins, and lead changes - all at speed. Judges score based on smoothness, finesse, attitude, and correctness of the pattern. American Quarter Horses dominate this discipline.",
+        "Category": "Events"
+    },
+    {
+        "Question": "What is ranch sorting?",
+        "Answer": "Ranch sorting is a timed team cattle-working event where two riders work together to separate specifically numbered cattle from a mixed herd and move them into an adjacent pen in numerical order (0-9). Teams have 60-90 seconds to sort as many cattle as possible. The event originated from actual ranch work and tests cow sense, horsemanship, and teamwork. It's less intense than cutting but still requires skill in reading and controlling cattle.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Are there concerts at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre hosts concerts, particularly during the Roots N' Boots Country Music Festival which is one of Arizona's largest country music festivals. The festival features major country music headliners and emerging artists on multiple stages. The facility's large arena capacity (over 2,600 seats in Arena 1) and infrastructure make it suitable for live music events. Check the event calendar for upcoming concerts and music festivals at the venue.",
+        "Category": "Events"
+    },
+    {
+        "Question": "Are there rodeos at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre regularly hosts rodeo events throughout the year. The facility is designed for professional rodeo competition and hosts events sanctioned by organizations like the Professional Rodeo Cowboys Association (PRCA). Rodeo events typically include traditional disciplines such as barrel racing, team roping, bull riding, and other timed and rough stock events. The facility's multiple arenas, professional-grade infrastructure, and seating capacity make it ideal for both amateur and professional rodeo competitions.",
+        "Category": "Events"
+    },
+    {
+        "Question": "How often does HorseShoe Park & Equestrian Centre have cutting horse shows?",
+        "Answer": "HorseShoe Park & Equestrian Centre is home to the Arizona Cutting Horse Association (AZCHA) and hosts cutting competitions regularly throughout the year. The Arizona Cutting Horse Arena (Arena 3) is specifically designed for cutting events. Major competitions include multi-day events with divisions for Open, Non-Pro, Amateur, and Youth competitors. AZCHA follows NCHA (National Cutting Horse Association) rules and offers year-end awards for top performers. Check the event calendar for specific cutting show dates, as these events occur frequently and draw competitors from across Arizona and neighboring states.",
+        "Category": "Events"
+    }
+];
+
+    const policiesData = [
+    {
+        "Question": "Can I rent an arena at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, all event facilities at HorseShoe Park & Equestrian Centre are available for reservation 365 days per year. Arena rental fees vary depending on the needs of your event. A negotiated reservation fee is required at the signing of a Facility Use Agreement and is credited to the final bill. Multi-year contracts are also negotiable. Please call 480-358-3793 to discuss your event requirements and pricing.",
+        "Category": "Rental"
+    },
+    {
+        "Question": "What are the facility rules at HorseShoe Park & Equestrian Centre?",
+        "Answer": "HorseShoe Park & Equestrian Centre follows Town of Queen Creek facility regulations including: no glass containers allowed, dogs must be on leash at all times and cleaned up after, trash must be placed in proper receptacles, no advertising or solicitation without permit, and no motorized vehicles except on designated roadways. The Town has authority to enforce all facility rules and regulations for safety and a positive experience for all visitors.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "What insurance is required to rent HorseShoe Park & Equestrian Centre?",
+        "Answer": "Event renters must provide liability insurance as outlined in the Facility Use Agreement. The required coverage amounts, additionally insured documentation, and type of policy will be specified in your contract. The insurance policy document must be received at least 30 days prior to the event. Failure to comply with insurance requirements will result in forfeiture of reserved dates and any fees paid.",
+        "Category": "Rental"
+    },
+    {
+        "Question": "What is HorseShoe Park & Equestrian Centre's cancellation policy?",
+        "Answer": "Unless otherwise stated in the rental contract, any cancellation within six months of the event date will require full payment of the contract. A negotiated reservation fee is required at signing of the Facility Use Agreement and is credited to the final bill but is non-refundable if the renter cancels the reservation.",
+        "Category": "Rental"
+    },
+    {
+        "Question": "Are outside food vendors allowed at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Concessions and catering are handled by HorseShoe Park & Equestrian Centre's on-site concessionaire. No outside food or beverage vendors will be permitted without written consent from the HorseShoe Park & Equestrian Centre General Manager. For details about catering arrangements, please call 480-358-3793.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "Can I grill at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Grilling is only allowed at reserved RV sites. Grilling is not permitted in other areas of HorseShoe Park & Equestrian Centre including the Community Arena, spectator areas, or parking lots.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "Does HorseShoe Park & Equestrian Centre allow alcohol?",
+        "Answer": "HorseShoe Park & Equestrian Centre currently holds a State Liquor License. Alcohol service at events is regulated by the facility and must be approved in advance. Contact the facility at 480-358-3793 for specific requirements and policies regarding alcohol service at your event.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "What equipment is not allowed in the Community Arena?",
+        "Answer": "The Community Arena at HorseShoe Park & Equestrian Centre is for drop-in general use only. Barrels, poles, jumps, cattle, and other specialized equestrian equipment are not permitted in the Community Arena. These activities are reserved for the main event arenas which can be rented for organized competition and training.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "Are dogs allowed at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, dogs are allowed at HorseShoe Park & Equestrian Centre but must be on a leash at all times and must be cleaned up after. This follows Town of Queen Creek public facility regulations to ensure safety and cleanliness for all visitors.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "Are drones allowed at HorseShoe Park & Equestrian Centre?",
+        "Answer": "Drone use at HorseShoe Park & Equestrian Centre is subject to Town of Queen Creek regulations and may require advance permission from facility management. Due to safety concerns around horses and livestock, unauthorized drone operation is generally prohibited. Contact the facility at 480-358-3793 before bringing any drone or unmanned aerial vehicle to ensure compliance with current policies and obtain necessary permissions.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "Can I bring my own food and drink to HorseShoe Park & Equestrian Centre?",
+        "Answer": "Yes, visitors may bring their own food and drinks for personal consumption. However, no outside food or beverage vendors are permitted without written consent from the HorseShoe Park & Equestrian Centre General Manager. Glass containers are not allowed anywhere on the facility grounds. An on-site concessionaire handles all commercial food and beverage sales. For special event catering inquiries, contact 480-358-3793.",
+        "Category": "Policies"
+    },
+    {
+        "Question": "Who do I talk to about renting an arena or producing an event at HorseShoe Park & Equestrian Centre?",
+        "Answer": "For arena rentals and event production inquiries, contact HorseShoe Park & Equestrian Centre directly at 480-358-3793. This is the dedicated rental line where staff can discuss facility availability, pricing, insurance requirements, and the Facility Use Agreement. You can also email hpec@queencreekaz.gov for rental questions. Tours are available for potential event organizers and producers who want to see the facility before booking.",
+        "Category": "Rental"
+    },
+    {
+        "Question": "Is HorseShoe Park & Equestrian Centre open at night?",
+        "Answer": "Yes, HorseShoe Park & Equestrian Centre has extended evening hours on weekends. The main facility and business office operate Monday through Friday from 7:00 AM to 5:00 PM. On weekends (Saturday and Sunday), the facility is open from 7:00 AM to 10:00 PM. The Community Arena is available for drop-in use from 7:00 AM to 10:00 PM daily, seven days a week. Event facilities can be reserved 365 days per year and may operate beyond regular business hours for scheduled events.",
+        "Category": "Policies"
+    }
+];
+
+
+
+
+const calendarData = [
+    {"EventName": "Arizona Cutting Horse Association", "StartDate": "02/04/2026", "EndDate": "02/08/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Cutting", "Description": "The Arizona Cutting Horse Association hosts this multi-day cutting horse competition featuring riders from across Arizona and neighboring states. Cutting is a western riding competition where horse and rider work together to separate a single cow from a herd and prevent it from returning. Classes range from beginner to professional levels, with categories including Open, Non-Pro, Amateur, and Youth divisions. AZCHA follows NCHA rules and offers year-end awards including saddles for top money earners. NCHA membership and horse registration papers required for entry. Stalls and RV spots available through venue reservation system.", "Website": "https://azcutting.com", "Phone": "928-277-6103"},
+    {"EventName": "QC 4H Horse Project", "StartDate": "02/10/2026", "EndDate": "02/10/2026", "StartTime": "6:00 PM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "4-H/Youth", "Description": "Queen Creek 4-H Horse Project monthly meeting for youth members ages 5-18 interested in developing horsemanship skills, learning equine care, and participating in community service projects. The program teaches responsibility, leadership, and citizenship through hands-on horse-related activities. Members participate in horse shows, clinics, and educational workshops throughout the year. Meetings include demonstrations, guest speakers, and preparation for upcoming 4-H competitions. Open to Queen Creek area youth who want to learn about horses in a supportive club environment.", "Website": "", "Phone": ""},
+    {"EventName": "CMSA Winter US Championship", "StartDate": "02/13/2026", "EndDate": "02/21/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Mounted Shooting", "Description": "The CMSA Winter US Championship brings top mounted shooters from across the country to Queen Creek for one of the sport's premier events. Cowboy mounted shooting is one of the fastest-growing equestrian sports, combining horsemanship and marksmanship as riders navigate courses on horseback while shooting balloon targets with .45 caliber single-action revolvers loaded with blank ammunition. Competition classes include levels from novice to professional, with youth divisions available. The sport originated in Arizona in 1995 and ACMSA is the world's oldest CMSA affiliate club. Free for spectators to watch the thrilling competition featuring over 60 different course patterns.", "Website": "https://cmsaevents.com", "Phone": ""},
+    {"EventName": "Heart Cry Cowboy Church", "StartDate": "02/22/2026", "EndDate": "02/22/2026", "StartTime": "6:00 PM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Community", "Description": "Heart Cry Cowboy Church holds weekly worship services at Horseshoe Park, welcoming the western and equestrian community for fellowship in a comfortable, cowboy-friendly atmosphere. Services feature contemporary Christian music with a western flair, relevant messages, and opportunities for prayer and community connection. All are welcome regardless of background or experience with horses. The ministry serves Queen Creek's active equestrian community and provides spiritual support during horse show weekends and events. Casual western attire encouraged. Family-friendly service suitable for all ages.", "Website": "", "Phone": ""},
+    {"EventName": "Arizona Cutting Horse Association", "StartDate": "02/25/2026", "EndDate": "03/01/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Cutting", "Description": "Five-day AZCHA cutting competition continuing the winter show season at Horseshoe Park. This event features the ReRun Riot classes with updated rules for 2026, offering saddles to the highest year-end money earners in $50,000 Non Pro, $25,000 Amateur, $4,000 Ltd Rider, and $1,000 Amateur divisions. Fresh cattle provided for fair competition. Exhibitors compete for circuit points and prize money while building standings toward year-end awards. Must enter and show at 30% of AZCHA-produced shows minimum to qualify for year-end awards. Hampton Inn Queen Creek offers special rates for participants.", "Website": "https://azcutting.com", "Phone": "928-277-6103"},
+    {"EventName": "Burns Xtreme Barrel Race", "StartDate": "03/06/2026", "EndDate": "03/08/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Barrel Racing", "Description": "Burns Xtreme Barrel Race returns to Horseshoe Park featuring open competition with progressive added money and exceptional awards including Burns Custom Saddles, 5 Star Pads, and custom hats. No memberships, qualifications, or nominations required - everyone is welcome. Classes include Open 5D with 0.5 second splits, Futurity and Derby 3D classes with 0.7 splits, Youth Championship, Over N Under (17 and under or 50 and over), and Prime (18-49). The Burns family has produced premier barrel racing events since 1993, known for excellent arena footing and fair competition.", "Website": "https://burnsteamroping.com", "Phone": ""},
+    {"EventName": "Arizona Horse Show - Hunter Jumper Schooling", "StartDate": "03/07/2026", "EndDate": "03/08/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Hunter/Jumper", "Description": "Schooling show opportunity for hunter and jumper riders to gain experience in a relaxed competition environment. Classes available for all levels from beginners on the flat through experienced competitors over fences. Divisions include walk-trot, short stirrup, children's and adult hunters, and jumper classes at various heights. Perfect opportunity for green horses and novice riders to practice in a show atmosphere before entering rated competitions. Judges provide feedback to help riders improve. Entries typically accepted day of show.", "Website": "", "Phone": ""},
+    {"EventName": "Queen Creek 4H Horse Show", "StartDate": "03/13/2026", "EndDate": "03/13/2026", "StartTime": "6:00 PM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "4-H/Youth", "Description": "Annual Queen Creek 4-H Horse Show showcasing youth riders who have developed their skills through the 4-H Horse Project program. Classes include showmanship, western pleasure, horsemanship, trail, and speed events appropriate for youth competitors. 4-H members demonstrate their knowledge of horse care, proper handling techniques, and riding abilities developed throughout the year. Judged by certified 4-H horse show officials. Awards recognize achievement in various divisions based on age and experience level.", "Website": "", "Phone": ""},
+    {"EventName": "Cisco Productions Team Penning and Ranch Sorting", "StartDate": "03/13/2026", "EndDate": "03/15/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Team Penning", "Description": "USTPA-sanctioned team penning and ranch sorting competition bringing together riders of all skill levels. Team penning requires three-rider teams to separate specific numbered cattle from a herd and pen them within 60 seconds. Ranch sorting challenges two-rider teams to move cattle in numerical order between connected pens. Fresh cattle ensure fair competition. Classes rated by team experience levels allow competitors from beginners to professionals. These timed events test horsemanship, teamwork, and cattle-working skills derived from traditional ranch work.", "Website": "", "Phone": ""},
+    {"EventName": "Chandler Vaqueros Saddle Club", "StartDate": "03/14/2026", "EndDate": "03/14/2026", "StartTime": "10:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Gymkhana", "Description": "Chandler Vaqueros Saddle Club monthly gymkhana rodeo featuring competitive western horseback riding events. Established in 1968 by the Chandler Sheriff's Mounted Posse Association, CVSC offers affordable competition in goat pulling, goat tying, barrel racing, pole bending, and speed events. Age groups include 3-8, 9-12, 13-18, 19-39, and 40+ with all skill levels welcome. Members can participate in one event or all using the same or multiple horses. Points accumulate toward year-end awards.", "Website": "", "Phone": ""},
+    {"EventName": "Roots N Boots Rodeo", "StartDate": "03/17/2026", "EndDate": "03/22/2026", "StartTime": "7:00 PM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Rodeo", "Description": "Roots N' Boots Queen Creek 2026 - More than a Rodeo! Voted one of the Top 5 PRCA Small Rodeos in 2024. Six days of professional rodeo action featuring bareback riding, steer wrestling, saddle bronc riding, tie-down roping, team roping, breakaway roping, bull riding, and WPRA barrel racing. Wednesday All-Women's Rodeo, Thursday Roots N' Chutes bull riding, and full PRCA performances Friday-Sunday. Additional attractions include Cowboy Mounted Shooting, carnival and midway, Cowboy Marketplace vendors, AGTivity Zone, Kids N' Kritters petting zoo, and nightly dances.", "Website": "https://rootsnboots.org", "Phone": ""},
+    {"EventName": "Queen Creek Gymkhana Club", "StartDate": "03/27/2026", "EndDate": "03/27/2026", "StartTime": "6:00 PM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Gymkhana", "Description": "Queen Creek Gymkhana Club hosts evening speed event competition featuring barrel racing, pole bending, keyhole, flags, and other timed events. Open to riders of all ages and skill levels looking for affordable, fun competition in a supportive atmosphere. Events test horse and rider agility, speed, and precision. Points accumulate toward year-end awards in various age divisions. Family-friendly environment encourages youth participation and development of horsemanship skills.", "Website": "", "Phone": ""},
+    {"EventName": "Champagne Dressage Show", "StartDate": "03/27/2026", "EndDate": "03/29/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Dressage", "Description": "Central Arizona Riding Academy presents the Champagne Dressage Show, a USEF/USDF recognized competition featuring classical dressage tests from Training Level through Grand Prix. CARA is a family-friendly dressage training and boarding facility owned by Ulrich Schmitz and Dorie Vlatten-Schmitz, providing instruction from beginner through FEI levels. Competition judges evaluate horse and rider on their ability to perform prescribed movements demonstrating harmony, precision, and training. Classes include Open, Amateur, and Junior/Young Rider divisions.", "Website": "", "Phone": ""},
+    {"EventName": "Chandler Vaqueros Saddle Club", "StartDate": "03/28/2026", "EndDate": "03/28/2026", "StartTime": "10:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Gymkhana", "Description": "Chandler Vaqueros Saddle Club continues their season of affordable western horseback riding competitions. This nonprofit club provides an environment where members compete in goat pulling, goat tying, barrel racing, pole bending, and speed events across five age divisions from ages 3 through 40+. All skill levels welcome from beginners learning their first patterns to experienced JR and SR high school rodeo participants. Points earned count toward season-ending awards including buckles and prizes.", "Website": "", "Phone": ""},
+    {"EventName": "CEP Hunt Cup April", "StartDate": "04/03/2026", "EndDate": "04/05/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Hunter/Jumper", "Description": "CEP returns to Horseshoe Park for the Hunt Cup April, a USHJA Outreach hunter jumper horse show. Collman Equestrian Productions, founded by Chris Collman in 1990, offers competition for riders from beginner through advanced levels. Classes include Walk-Trot through 3'0 Child/Adult Hunters and Equitation. Professional course design creates fair, educational tracks for developing riders.", "Website": "https://cepshows.com", "Phone": "480-704-3981"},
+    {"EventName": "CEP Queen Creek Spring", "StartDate": "04/09/2026", "EndDate": "04/12/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Hunter/Jumper", "Description": "Four-day CEP Queen Creek Spring Hunter Jumper Show featuring comprehensive competition for English riders. Show approved by USEF, USHJA, AHJA, CHJA, and NMHJA for broad regional recognition. Classes span from introductory Walk-Trot divisions through rated hunter, equitation, and jumper classes. Multiple arenas run simultaneously for efficient scheduling. Professional course design by Chris Collman and team creates fair, educational tracks.", "Website": "https://cepshows.com", "Phone": "480-704-3981"},
+    {"EventName": "Arizona Cutting Horse Association", "StartDate": "04/15/2026", "EndDate": "04/19/2026", "StartTime": "8:00 AM", "Location": "Queen Creek, AZ", "Venue": "HorseShoe Park", "EventType": "Cutting", "Description": "Spring AZCHA cutting competition as the Arizona show season continues. Multi-day event features classes for all skill levels from Youth through Open divisions. Competitors work to demonstrate their horse's ability to control individual cattle separated from the herd. Judges score based on horse's style, responsiveness, and degree of difficulty. Fresh cattle rotated throughout show for fair competition. Points count toward AZCHA year-end standings.", "Website": "https://azcutting.com", "Phone": "928-277-6103"}
+];
+
+// Populate event types dropdown
+function populateEventTypes() {
+    const types = [...new Set(calendarData.map(e => e.EventType))].sort();
+    const select = document.getElementById('eventTypeFilter');
+    types.forEach(type => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type;
+        select.appendChild(option);
+    });
+    document.getElementById('statTypes').textContent = types.length;
+    document.getElementById('statEvents').textContent = calendarData.length;
+}
+
+function showSection(section) {
+    const qaSection = document.getElementById('qaSection');
+    const policiesSection = document.getElementById('policiesSection');
+    const calendarSection = document.getElementById('calendarSection');
+    const submitSection = document.getElementById('submitSection');
+    
+    // Defensive check - make sure all sections exist
+    if (!qaSection || !policiesSection || !calendarSection || !submitSection) {
+        console.warn('showSection: One or more section elements not found');
+        return;
+    }
+    
+    // Hide all sections
+    qaSection.classList.add('hidden');
+    policiesSection.classList.add('hidden');
+    calendarSection.classList.add('hidden');
+    submitSection.classList.add('hidden');
+    
+    // Show selected section
+    if (section === 'qa') {
+        qaSection.classList.remove('hidden');
+        displayQA(qaData);
+    } else if (section === 'policies') {
+        policiesSection.classList.remove('hidden');
+        displayPolicies(policiesData);
+    } else if (section === 'calendar') {
+        calendarSection.classList.remove('hidden');
+        displayCalendar(calendarData);
+    } else if (section === 'submit') {
+        submitSection.classList.remove('hidden');
+    }
+}
+
+function displayQA(qaItems) {
+    const container = document.getElementById('qaResultsContainer');
+    const resultsCount = document.getElementById('qaResultsCount');
+    
+    // Defensive check - CRITICAL
+    if (!container || !resultsCount) {
+        console.warn('displayQA: Required elements not found');
+        return;
+    }
+    
+    container.innerHTML = '';
+    resultsCount.textContent = qaItems.length;
+    
+    qaItems.forEach(qa => {
+        const qaDiv = document.createElement('div');
+        qaDiv.className = 'qa-item';
+        qaDiv.innerHTML = `
+            <div class="qa-question">${qa.Question}</div>
+            <div class="qa-answer">${qa.Answer || 'Answer pending...'}</div>
+            ${qa.Category ? `<span class="qa-category">${qa.Category}</span>` : ''}
+        `;
+        container.appendChild(qaDiv);
+    });
+}
+
+function displayCalendar(events) {
+    const container = document.getElementById('calendarResultsContainer');
+    const resultsCount = document.getElementById('calendarResultsCount');
+    
+    // Defensive check - CRITICAL
+    if (!container || !resultsCount) {
+        console.warn('displayCalendar: Required elements not found');
+        return;
+    }
+    
+    container.innerHTML = '';
+    resultsCount.textContent = events.length;
+    
+    const sorted = [...events].sort((a, b) => new Date(a.StartDate) - new Date(b.StartDate));
+    
+    sorted.forEach(event => {
+        const eventDiv = document.createElement('div');
+        eventDiv.className = 'event-card';
+        
+        // Format date range
+        let dateDisplay = `📅 ${event.StartDate}`;
+        if (event.EndDate && event.EndDate !== event.StartDate) {
+            dateDisplay += ` - ${event.EndDate}`;
+        }
+        dateDisplay += ` • ${event.StartTime}`;
+        
+        // Build links section
+        let linksHtml = '';
+        if (event.Website || event.Phone) {
+            linksHtml = '<div class="event-links">';
+            if (event.Website) linksHtml += `<a href="${event.Website}" target="_blank">🌐 Website</a>`;
+            if (event.Phone) linksHtml += `<span>📞 ${event.Phone}</span>`;
+            linksHtml += '</div>';
+        }
+        
+        eventDiv.innerHTML = `
+            <div class="event-title">${event.EventName}</div>
+            <div class="event-date">${dateDisplay}</div>
+            <div class="event-location">📍 ${event.Venue}, ${event.Location}</div>
+            <span class="event-type-tag">${event.EventType}</span>
+            <div class="event-description">${event.Description || ''}</div>
+            ${linksHtml}
+        `;
+        container.appendChild(eventDiv);
+    });
+}
+
+function searchQA() {
+    const qaSearchInput = document.getElementById('qaSearchInput');
+    
+    // Defensive check
+    if (!qaSearchInput) {
+        console.warn('searchQA: qaSearchInput not found');
+        return;
+    }
+    
+    const searchTerm = qaSearchInput.value.toLowerCase();
+    const filtered = qaData.filter(qa => 
+        qa.Question.toLowerCase().includes(searchTerm) ||
+        (qa.Answer && qa.Answer.toLowerCase().includes(searchTerm))
+    );
+    displayQA(filtered);
+}
+
+function clearQASearch() {
+    const qaSearchInput = document.getElementById('qaSearchInput');
+    const qaCategoryFilter = document.getElementById('qaCategoryFilter');
+    
+    // Defensive check
+    if (!qaSearchInput || !qaCategoryFilter) {
+        console.warn('clearQASearch: Required elements not found');
+        return;
+    }
+    
+    qaSearchInput.value = '';
+    qaCategoryFilter.value = '';
+    displayQA(qaData);
+}
+
+function filterQA() {
+    const qaCategoryFilter = document.getElementById('qaCategoryFilter');
+    
+    // Defensive check
+    if (!qaCategoryFilter) {
+        console.warn('filterQA: qaCategoryFilter not found');
+        return;
+    }
+    
+    const category = qaCategoryFilter.value;
+    let filtered = qaData;
+    if (category) filtered = filtered.filter(q => q.Category === category);
+    displayQA(filtered);
+}
+
+function selectQACategory(category) {
+    const qaCategoryFilter = document.getElementById('qaCategoryFilter');
+    const qaSearchInput = document.getElementById('qaSearchInput');
+    const qaResultsContainer = document.getElementById('qaResultsContainer');
+    
+    // Defensive check
+    if (!qaCategoryFilter || !qaSearchInput) {
+        console.warn('selectQACategory: Required elements not found');
+        return;
+    }
+    
+    // Set the dropdown to the selected category
+    qaCategoryFilter.value = category;
+    // Clear search input
+    qaSearchInput.value = '';
+    // Trigger the filter
+    filterQA();
+    // Scroll to results
+    if (qaResultsContainer) {
+        qaResultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function displayPolicies(policyItems) {
+    const container = document.getElementById('policiesResultsContainer');
+    const resultsCount = document.getElementById('policiesResultsCount');
+    
+    // Defensive check - CRITICAL
+    if (!container || !resultsCount) {
+        console.warn('displayPolicies: Required elements not found');
+        return;
+    }
+    
+    container.innerHTML = '';
+    resultsCount.textContent = policyItems.length;
+    
+    policyItems.forEach(policy => {
+        const policyDiv = document.createElement('div');
+        policyDiv.className = 'qa-item';
+        policyDiv.innerHTML = `
+            <div class="qa-question">${policy.Question}</div>
+            <div class="qa-answer">${policy.Answer || 'Answer pending...'}</div>
+            ${policy.Category ? `<span class="qa-category">${policy.Category}</span>` : ''}
+        `;
+        container.appendChild(policyDiv);
+    });
+}
+
+function searchPolicies() {
+    const policiesSearchInput = document.getElementById('policiesSearchInput');
+    
+    // Defensive check
+    if (!policiesSearchInput) {
+        console.warn('searchPolicies: policiesSearchInput not found');
+        return;
+    }
+    
+    const searchTerm = policiesSearchInput.value.toLowerCase();
+    const filtered = policiesData.filter(policy => 
+        policy.Question.toLowerCase().includes(searchTerm) ||
+        (policy.Answer && policy.Answer.toLowerCase().includes(searchTerm))
+    );
+    displayPolicies(filtered);
+}
+
+function clearPoliciesSearch() {
+    const policiesSearchInput = document.getElementById('policiesSearchInput');
+    const policiesCategoryFilter = document.getElementById('policiesCategoryFilter');
+    
+    // Defensive check
+    if (!policiesSearchInput || !policiesCategoryFilter) {
+        console.warn('clearPoliciesSearch: Required elements not found');
+        return;
+    }
+    
+    policiesSearchInput.value = '';
+    policiesCategoryFilter.value = '';
+    displayPolicies(policiesData);
+}
+
+function filterPolicies() {
+    const policiesCategoryFilter = document.getElementById('policiesCategoryFilter');
+    
+    // Defensive check
+    if (!policiesCategoryFilter) {
+        console.warn('filterPolicies: policiesCategoryFilter not found');
+        return;
+    }
+    
+    const category = policiesCategoryFilter.value;
+    let filtered = policiesData;
+    if (category) filtered = filtered.filter(p => p.Category === category);
+    displayPolicies(filtered);
+}
+
+function selectPoliciesCategory(category) {
+    const policiesCategoryFilter = document.getElementById('policiesCategoryFilter');
+    const policiesSearchInput = document.getElementById('policiesSearchInput');
+    const policiesResultsContainer = document.getElementById('policiesResultsContainer');
+    
+    // Defensive check
+    if (!policiesCategoryFilter || !policiesSearchInput) {
+        console.warn('selectPoliciesCategory: Required elements not found');
+        return;
+    }
+    
+    // Set the dropdown to the selected category
+    policiesCategoryFilter.value = category;
+    // Clear search input
+    policiesSearchInput.value = '';
+    // Trigger the filter
+    filterPolicies();
+    // Scroll to results
+    if (policiesResultsContainer) {
+        policiesResultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function searchCalendar() {
+    const calendarSearchInput = document.getElementById('calendarSearchInput');
+    
+    // Defensive check
+    if (!calendarSearchInput) {
+        console.warn('searchCalendar: calendarSearchInput not found');
+        return;
+    }
+    
+    const searchTerm = calendarSearchInput.value.toLowerCase();
+    const filtered = calendarData.filter(event => 
+        event.EventName.toLowerCase().includes(searchTerm) ||
+        (event.Description && event.Description.toLowerCase().includes(searchTerm)) ||
+        (event.EventType && event.EventType.toLowerCase().includes(searchTerm))
+    );
+    displayCalendar(filtered);
+}
+
+function applyCalendarFilters() {
+    const eventNameFilter = document.getElementById('eventNameFilter');
+    const eventTypeFilter = document.getElementById('eventTypeFilter');
+    const monthFilter = document.getElementById('monthFilter');
+    
+    // Defensive check
+    if (!eventNameFilter || !eventTypeFilter || !monthFilter) {
+        console.warn('applyCalendarFilters: Required filter elements not found');
+        return;
+    }
+    
+    const eventName = eventNameFilter.value.toLowerCase();
+    const eventType = eventTypeFilter.value;
+    const month = monthFilter.value;
+    
+    let filtered = calendarData;
+    if (eventName) filtered = filtered.filter(e => e.EventName.toLowerCase().includes(eventName));
+    if (eventType) filtered = filtered.filter(e => e.EventType === eventType);
+    if (month) filtered = filtered.filter(e => e.StartDate.split('/')[0] === month);
+    
+    displayCalendar(filtered);
+}
+
+function selectEventType(eventType) {
+    const eventTypeFilter = document.getElementById('eventTypeFilter');
+    const eventNameFilter = document.getElementById('eventNameFilter');
+    const calendarSearchInput = document.getElementById('calendarSearchInput');
+    const monthFilter = document.getElementById('monthFilter');
+    const calendarResultsContainer = document.getElementById('calendarResultsContainer');
+    
+    // Defensive check
+    if (!eventTypeFilter || !eventNameFilter || !calendarSearchInput || !monthFilter) {
+        console.warn('selectEventType: Required filter elements not found');
+        return;
+    }
+    
+    // Set the dropdown to the selected event type
+    eventTypeFilter.value = eventType;
+    // Clear other filters
+    eventNameFilter.value = '';
+    calendarSearchInput.value = '';
+    monthFilter.value = '';
+    // Trigger the filter
+    applyCalendarFilters();
+    // Scroll to results
+    if (calendarResultsContainer) {
+        calendarResultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function clearCalendarSearch() {
+    const calendarSearchInput = document.getElementById('calendarSearchInput');
+    const eventNameFilter = document.getElementById('eventNameFilter');
+    const eventTypeFilter = document.getElementById('eventTypeFilter');
+    const monthFilter = document.getElementById('monthFilter');
+    
+    // Defensive check
+    if (!calendarSearchInput || !eventNameFilter || !eventTypeFilter || !monthFilter) {
+        console.warn('clearCalendarSearch: Required filter elements not found');
+        return;
+    }
+    
+    calendarSearchInput.value = '';
+    eventNameFilter.value = '';
+    eventTypeFilter.value = '';
+    monthFilter.value = '';
+    displayCalendar(calendarData);
+}
+
+// Upcoming Events Horizontal Scroll
+function displayUpcomingEvents() {
+    const container = document.getElementById('upcomingScroll');
+    const upcomingCount = document.getElementById('upcomingCount');
+    
+    // Defensive check
+    if (!container || !upcomingCount) {
+        console.warn('displayUpcomingEvents: Required elements not found');
+        return;
+    }
+    
+    container.innerHTML = '';
+    
+    const sorted = [...calendarData].sort((a, b) => new Date(a.StartDate) - new Date(b.StartDate));
+    
+    upcomingCount.textContent = `${sorted.length} upcoming events`;
+    
+    sorted.forEach(event => {
+        const card = document.createElement('div');
+        card.className = 'upcoming-card';
+        card.onclick = () => {
+            showSection('calendar');
+            const calendarSearchInput = document.getElementById('calendarSearchInput');
+            if (calendarSearchInput) {
+                calendarSearchInput.value = event.EventName;
+                searchCalendar();
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        
+        const truncDesc = event.Description ? event.Description.substring(0, 100) + '...' : '';
+        
+        card.innerHTML = `
+            <div class="upcoming-card-date">${event.StartDate}</div>
+            <div class="upcoming-card-title">${event.EventName}</div>
+            <div class="upcoming-card-time">🕐 ${event.StartTime}</div>
+            <div class="upcoming-card-location">📍 ${event.Venue}, ${event.Location}</div>
+            <div class="upcoming-card-desc">${truncDesc}</div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+function scrollUpcoming(direction) {
+    const container = document.getElementById('upcomingScroll');
+    const scrollAmount = 260;
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
+
+// Global Search Function - Live search as user types
+function performGlobalSearch(showAlert) {
+    var searchInput = document.getElementById('globalSearch');
+    if (!searchInput) {
+        
+        return;
+    }
+    
+    var query = searchInput.value.toLowerCase().trim();
+    
+    // If empty, reset to default view
+    if (!query || query.length < 2) {
+        // Don't show alert for live typing, only if explicitly requested
+        if (showAlert && query.length > 0 && query.length < 2) {
+            // Do nothing, let them keep typing
+        }
+        return;
+    }
+    
+    // Search across Q&A, Policies, and Calendar
+    var qaResults = qaData.filter(function(item) {
+        return item.Question.toLowerCase().indexOf(query) !== -1 || 
+               item.Answer.toLowerCase().indexOf(query) !== -1 ||
+               item.Category.toLowerCase().indexOf(query) !== -1;
+    });
+    
+    var policiesResults = policiesData.filter(function(item) {
+        return item.Question.toLowerCase().indexOf(query) !== -1 || 
+               item.Answer.toLowerCase().indexOf(query) !== -1 ||
+               item.Category.toLowerCase().indexOf(query) !== -1;
+    });
+    
+    var calendarResults = calendarData.filter(function(evt) {
+        return evt.EventName.toLowerCase().indexOf(query) !== -1 ||
+               (evt.Description && evt.Description.toLowerCase().indexOf(query) !== -1) ||
+               evt.EventType.toLowerCase().indexOf(query) !== -1;
+    });
+    
+    // Show results in the appropriate sections
+    if (qaResults.length > 0 || policiesResults.length > 0 || calendarResults.length > 0) {
+        // Prioritize in order: calendar, policies, qa
+        if (calendarResults.length > 0) {
+            showSection('calendar');
+            document.getElementById('calendarSearchInput').value = query;
+            displayCalendar(calendarResults);
+        } else if (policiesResults.length > 0) {
+            showSection('policies');
+            document.getElementById('policiesSearchInput').value = query;
+            displayPolicies(policiesResults);
+        } else if (qaResults.length > 0) {
+            showSection('qa');
+            document.getElementById('qaSearchInput').value = query;
+            displayQA(qaResults);
+        }
+    } else if (showAlert) {
+        // Only show alert when button clicked or Enter pressed, not during typing
+        alert('No results found for "' + query + '". Try different keywords.');
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize displays
+    displayQA(qaData);
+    displayPolicies(policiesData);
+    displayCalendar(calendarData);
+    displayUpcomingEvents();
+    populateEventTypes();
+    
+    // Set up global search button (with alert on no results)
+    var globalSearchBtn = document.getElementById('globalSearchBtn');
+    if (globalSearchBtn) {
+        globalSearchBtn.addEventListener('click', function() {
+            performGlobalSearch(true);
+        });
+    }
+    
+    // Set up global search - live search as user types
+    var globalSearchInput = document.getElementById('globalSearch');
+   if (globalSearchInput) {
+        // Live search on input (fires on every keystroke)
+        globalSearchInput.addEventListener('input', function() {
+            performGlobalSearch(false);
+        });
+        
+        // Also support Enter key (with alert on no results)
+        globalSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performGlobalSearch(true);
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>
