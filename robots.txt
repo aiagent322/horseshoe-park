@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://horseshoepark.pages.dev/sitemap.xml
